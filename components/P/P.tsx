@@ -1,10 +1,10 @@
-import { PProps } from "./P.props";
+import {PProps} from "./P.props";
 import cn from 'classnames';
 import {inspect} from "util";
 import styles from './P.module.css';
 
 
-export const P = ({ size = 'm', children, className, ...props}: PProps): JSX.Element => {
+export const P = ({size = 'm', children, className, ...props}: PProps): JSX.Element => {
     return (
         <p
             className={cn(styles.p, className, {
@@ -18,4 +18,4 @@ export const P = ({ size = 'm', children, className, ...props}: PProps): JSX.Ele
         </p>
     );
 
-    }
+}
