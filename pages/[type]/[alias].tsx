@@ -7,13 +7,16 @@ import {TopLevelCategory, TopPageModel} from "../../interfaces/page.interface";
 import {ParsedUrlQuery} from 'node:querystring';
 import {ProductModel} from "../../interfaces/product.interface";
 import {firstLevelMenu} from "../../helpers/helpers";
+import {TopPageComponent} from "../../page-components";
 
 
-function TopPage({menu, page, products}: TopPageProps): JSX.Element {
+function TopPage({firstCategory, page, products}: TopPageProps): JSX.Element {
     return (
-        <>
-            {products && products.length}
-        </>
+        <TopPageComponent
+            firstCategory={firstCategory}
+            page={page}
+            products={products}
+        />
     );
 }
 
